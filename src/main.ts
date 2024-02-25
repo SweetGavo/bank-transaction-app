@@ -21,6 +21,7 @@ app.use('/api', router);
 
 // Start the server
 app.listen(port, () => {
+  
   console.log(`Server is running on port ${port}`);
 });
 
@@ -28,4 +29,5 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(3000);
 }
+
 bootstrap();

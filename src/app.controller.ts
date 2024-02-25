@@ -5,6 +5,8 @@ import { AuthGuard } from '@nestjs/passport';
 
 @Controller()
 export class AppController {
+  getHello: any;
+  
   @UseGuards(AuthGuard('jwt'), RolesGuard)
   @Get('protected')
   protectedResource() {
