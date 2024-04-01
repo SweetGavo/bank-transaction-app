@@ -74,7 +74,7 @@ export class TransactionController {
     try {
       const user = await this.userService.getById(id);
       if (!user) {
-        throw new NotFoundException('User not found');
+        throw new NotFoundException('User not found in database');
       }
 
       const transaction = await this.transactionService.getTransaction(
